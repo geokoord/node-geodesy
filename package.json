@@ -2,10 +2,11 @@
   "name": "node-geodesy",
   "version": "0.0.1",
   "description": "Nodejs framework for geodetic calculations",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc --build && node ./build/index.js"
+    "test": "tsc --build && node ./test/test.js",
+    "start": "tsc --build && node ./build/index.js",
+    "build": "tsc --build"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
     "geodesy"
   ],
   "author": "Manuel Hart",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/geokoord/node-geodesy/issues"
   },
