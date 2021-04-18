@@ -1,6 +1,6 @@
 {
   "name": "node-geodesy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nodejs framework for geodetic calculations",
   "main": "build/index.js",
   "scripts": {
