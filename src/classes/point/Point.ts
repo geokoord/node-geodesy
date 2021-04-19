@@ -8,12 +8,12 @@ export class Point {
   private _E: number;         //East-value
   private _h: number;         //height
 
-  constructor(north?: number, east?: number, height?: number, name?: string, type?: PointType) {
+  constructor(north: number, east: number, height: number, name?: string, type?: PointType) {
     this._id = uuidv4();
     this._name = name || null;
-    this._N = north || null;
-    this._E = east || null;
-    this._h = height || null;
+    this._N = north;
+    this._E = east;
+    this._h = height;
     this._type = type || PointType.Meas;
   }
 

@@ -4,7 +4,7 @@
   "description": "Nodejs framework for geodetic calculations",
   "main": "build/index.js",
   "scripts": {
-    "test": "tsc --build && node ./test/test.js",
+    "test": "tsc --build && node ./build/test/Test.js",
     "start": "tsc --build && node ./build/index.js",
     "build": "tsc --build"
   },

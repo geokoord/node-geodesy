@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export class Measure {
   private _id: string;
-  private _sd: number;        //Inclined track
+  private _sd: number;         //Inclined track
   private _hz: number;         //Horizontal angle
   private _vz: number;         //Vertical angle
   private _temperature;
@@ -17,8 +17,8 @@ export class Measure {
     this._pressure = null;
   }
 
-  get hz(): string {
-    return this.hz;
+  get hz(): number {
+    return this._hz;
   }
 
   get vz(): number {
@@ -26,6 +26,14 @@ export class Measure {
   }
 
   get sd(): number {
-    return this.sd;
+    return this._sd;
+  }
+
+  get sh(): number {
+    return (Math.sin(this.vz) * this.sd)
+  }
+
+  get sv(): number {
+    return (Math.cos(this.vz) * this.sd)
   }
 }

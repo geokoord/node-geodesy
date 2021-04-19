@@ -9,6 +9,7 @@ const NodeGeodesy = {
     Campain: Campain_1.Campain,
     Position: Position_1.Position,
     Point: Point_1.Point,
+    PointType: Point_1.PointType,
     Observation: Observation_1.Observation,
     Measure: Measure_1.Measure,
 };

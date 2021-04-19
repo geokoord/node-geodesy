@@ -69,11 +69,7 @@ export class Position {
   }
 
   static appendPolarCoordinates(measure: Measure): Point {
-
-
-
-
-    return new Point(0, 0);
+    return null
   }
 
 }

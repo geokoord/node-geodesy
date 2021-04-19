@@ -6,10 +6,10 @@ class Point {
     constructor(north, east, height, name, type) {
         this._id = uuid_1.v4();
         this._name = name || null;
-        this._N = north || null;
-        this._E = east || null;
-        this._h = height || null;
-        this._type = type || 3;
+        this._N = north;
+        this._E = east;
+        this._h = height;
+        this._type = type || PointType.Meas;
     }
     /**
      * Get mathematical XYZ Array

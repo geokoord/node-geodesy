@@ -7,13 +7,13 @@ export class Campain {
   private _id: string;
   private _name: string;                    //Name of the Campain/Job
   private _points: Array<Point>;            //Points of this Campain/Job
-  private _positions: Array<Position>       //Positions of this Campain/Job
+  private _position: Position              //Current of this Campain/Job
 
   constructor(name: string) {
     this._id = uuidv4();
     this._name = name;
     this._points = [];
-    this._positions = [];
+    this._position = null;
   }
 
   public set name(v: string) {
@@ -30,6 +30,10 @@ export class Campain {
 
   public get points(): Array<Point> {
     return this._points;
+  }
+
+  public set position(SP: Position) {
+    this._position = SP;
   }
 
 

@@ -49,7 +49,7 @@ class Position {
         this._observations.push(O);
     }
     static appendPolarCoordinates(measure) {
-        return new Point_1.Point(0, 0);
+        return null;
     }
 }
 exports.Position = Position;
