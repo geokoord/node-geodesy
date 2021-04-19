@@ -1,16 +1,20 @@
+import { v4 as uuidv4 } from 'uuid';
 
 export class Point {
-
+  private _id: string;
   private _name: string;
-  private _N: number;     //North-value
-  private _E: number;      //East-value
-  private _h: number;      //height
+  private _type: PointType;
+  private _N: number;         //North-value
+  private _E: number;         //East-value
+  private _h: number;         //height
 
-  constructor(north: number, east: number, height?: number, name?: string) {
-    this._name = name;
-    this._N = north || 0;
-    this._E = east || 0;
-    this._h = height || 0;
+  constructor(north?: number, east?: number, height?: number, name?: string, type?: PointType) {
+    this._id = uuidv4();
+    this._name = name || null;
+    this._N = north || null;
+    this._E = east || null;
+    this._h = height || null;
+    this._type = type || PointType.Meas;
   }
 
   /**
@@ -137,8 +141,14 @@ export class Point {
     return Math.atan2(dist2D, diff_h);
   }
 
+}
 
+export enum PointType {
 
+  Fix = 0,        //Fix Point
+  Ref = 1,         //Reference Point
+  Con = 2,        //Connection Point
+  Meas = 3,       //Measure Point (New)
 
 
 

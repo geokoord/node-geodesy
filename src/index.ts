@@ -1,12 +1,20 @@
 
-import { Point } from './classes/point/Point'
-import { Measure } from './classes/measure/Measure'
+import { Point, PointType } from './classes/point/Point'
+import { Campain } from './classes/campain/Campain'
+import { Position } from './classes/position/Position';
+import { Observation } from './classes/observation/Observation';
+import { Measure } from './classes/measure/Measure';
 
 const NodeGeodesy = {
-  Point: Point,
-  Measure: Measure
-}
 
+  Campain: Campain,
+  Position: Position,
+  Point: Point,
+  PointType: PointType,
+  Observation: Observation,
+  Measure: Measure,
+
+}
 
 export default NodeGeodesy;
 

@@ -1,12 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Point = void 0;
+exports.PointType = exports.Point = void 0;
+const uuid_1 = require("uuid");
 class Point {
-    constructor(north, east, height, name) {
-        this._name = name;
-        this._N = north || 0;
-        this._E = east || 0;
-        this._h = height || 0;
+    constructor(north, east, height, name, type) {
+        this._id = uuid_1.v4();
+        this._name = name || null;
+        this._N = north || null;
+        this._E = east || null;
+        this._h = height || null;
+        this._type = type || 3;
     }
     /**
      * Get mathematical XYZ Array
@@ -114,4 +117,11 @@ class Point {
     }
 }
 exports.Point = Point;
+var PointType;
+(function (PointType) {
+    PointType[PointType["Fix"] = 0] = "Fix";
+    PointType[PointType["Ref"] = 1] = "Ref";
+    PointType[PointType["Con"] = 2] = "Con";
+    PointType[PointType["Meas"] = 3] = "Meas";
+})(PointType = exports.PointType || (exports.PointType = {}));
 //# sourceMappingURL=Point.js.map
